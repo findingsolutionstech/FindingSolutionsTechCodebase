@@ -15,6 +15,7 @@ public class CheckoutCompleteClass {
 	public CheckoutCompleteClass(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		
 	}
 
 	@FindBy(xpath = "//*[.='THANK YOU FOR YOUR ORDER']")

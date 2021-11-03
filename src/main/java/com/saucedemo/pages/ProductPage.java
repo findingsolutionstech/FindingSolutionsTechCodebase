@@ -14,6 +14,7 @@ public class ProductPage {
 	public ProductPage(WebDriver driver) {	
 		this.driver = driver;
 		PageFactory.initElements(driver, this);	
+		
 	}
 	
 	 

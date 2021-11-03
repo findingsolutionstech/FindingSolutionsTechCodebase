@@ -14,6 +14,7 @@ public class RedTShirtProductPage {
 	public RedTShirtProductPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		
 	}
 	
 	

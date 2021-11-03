@@ -41,6 +41,7 @@ public class HomePageStepDefinitions {
     @Then("the I verify something")
     public void the_I_verify_something( ) {
     	homepage.clickLoginButton();
+    	
 
     }
 

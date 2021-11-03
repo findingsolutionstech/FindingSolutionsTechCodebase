@@ -54,6 +54,7 @@ public class CheckoutInfoPage {
 	
 	public void clickingContinue() {
 		infoPageContinueButton.click();
+		
 	}
 	
 	

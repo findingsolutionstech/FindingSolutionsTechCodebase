@@ -35,6 +35,7 @@ Feature: User access and checkout
     And clicks continue
     Then clicks finish
     Then user should see success message
+    
 
   @SmokeTest
   Scenario Outline: User completes a purchase successfully

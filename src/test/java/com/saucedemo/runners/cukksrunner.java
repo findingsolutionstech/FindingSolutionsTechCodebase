@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 		
 		features="src/test/resources/features/", 
 		
-		tags = "@SmokeTest",
+		tags = "@SmokeTest" ,
 		
 		
 		glue="com.saucedemo.steps")

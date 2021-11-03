@@ -107,6 +107,7 @@ public class BasicUserSingleItemCheckoutStepDefinitions {
 		checkOverviewPage = new CheckOverviewPage(driver);
 		checkOverviewPage.clickingChkOutOverviewfinishBtn();
 		// checkOverviewPage.quitPage();
+		
 	}
 
 	@Then("^user should see success message$")

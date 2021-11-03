@@ -12,6 +12,7 @@ public class CheckOverviewPage {
 	public CheckOverviewPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		
 	}
 
 	@FindBy(xpath = "//button[@id='finish']")
