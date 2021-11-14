@@ -47,8 +47,11 @@ public class CheckoutInfoPage {
 		lastNameField.sendKeys(lastname);
 	}
 	
-	public void enteringPostalCodeField(String zipcode) {
-		postalCodeField.sendKeys(zipcode);
+	public void enteringPostalCodeField(String zipcode) {	
+		
+		
+		String converted = String.valueOf (zipcode);
+		postalCodeField.sendKeys(converted);
 	}
 	
 	

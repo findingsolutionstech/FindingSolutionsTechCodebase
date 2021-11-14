@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 		
 		features="src/test/resources/features/", 
 		
-		tags = "@SmokeTest" ,
+		tags = "@DataDrivenValidation" ,
 		
 		
 		glue="com.saucedemo.steps")

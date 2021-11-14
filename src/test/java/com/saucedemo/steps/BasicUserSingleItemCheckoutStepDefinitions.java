@@ -30,6 +30,9 @@ public class BasicUserSingleItemCheckoutStepDefinitions {
 	CheckoutCompleteClass checkoutCompleteClass;
 	RedTShirtProductPage redTShirtProductPage;
 
+	
+	
+	/*
 	@Given("user navigates to saucelabs application")
 	public void user_navigates_to_saucelabs_application() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\ChromeDriver.exe");
@@ -41,6 +44,8 @@ public class BasicUserSingleItemCheckoutStepDefinitions {
 		loginPage.getBrowser();
 	}
 
+	*/
+	
 	@Then("^validate expected title as basic user$")
 	public void validate_expected_title_as_basic_user() {
 		loginPage.validateLoginPageTitle();
@@ -63,8 +68,8 @@ public class BasicUserSingleItemCheckoutStepDefinitions {
 
 	@When("^user selects a red tshirt$")
 	public void user_selects_a_red_tshirt() {
-//		productPage  = new ProductPage(driver);
-//		productPage.selectSauceLabsBackPack();
+		productPage  = new ProductPage(driver);
+		productPage.selectSauceLabsBackPack();
 		redTShirtProductPage = new RedTShirtProductPage(driver);
 		redTShirtProductPage.addRedTShirtToCart();
 	}
