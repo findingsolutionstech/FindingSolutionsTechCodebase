@@ -19,6 +19,16 @@ public class CheckoutInfoPage {
 	}
 	
 	
+	/* xpath, 
+	 * cssSelector, 
+	 * className, 
+	 * id, 
+	 * linkedtext, 
+	 * partiallinkedtext
+	 * 
+	 * tagName
+	 */
+	
 	@FindBy(xpath = "//input[@id='first-name']")
 	private WebElement firstNameField;
 
@@ -43,9 +53,13 @@ public class CheckoutInfoPage {
 		firstNameField.sendKeys(firstname);
 	}
 	
+	
+	
 	public void enteringLastNameField(String lastname) {
 		lastNameField.sendKeys(lastname);
 	}
+	
+	
 	
 	public void enteringPostalCodeField(String zipcode) {	
 		
@@ -53,6 +67,8 @@ public class CheckoutInfoPage {
 		String converted = String.valueOf (zipcode);
 		postalCodeField.sendKeys(converted);
 	}
+	
+	
 	
 	
 	public void clickingContinue() {
@@ -64,7 +80,16 @@ public class CheckoutInfoPage {
 	
 	
 	
+	public void userCheckoutOnInfoPage(String firstname, String lastname,  String zipcode) {
+		firstNameField.sendKeys(firstname);
+		lastNameField.sendKeys(lastname);
+
+		String converted = String.valueOf (zipcode);
+		postalCodeField.sendKeys(converted);
+		
+		infoPageContinueButton.click();
 	
+	}
 	
 	
 	

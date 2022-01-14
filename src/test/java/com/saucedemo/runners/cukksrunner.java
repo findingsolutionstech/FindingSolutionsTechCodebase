@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
 		
 		
 		
-		features="src/test/resources/features/", 
+		features={"src/test/resources/features/"}, 
 		
-		tags = "@DataDrivenValidation" ,
+		tags = "@Smoketest_regression",
 		
 		
 		glue="com.saucedemo.steps")
@@ -22,3 +22,6 @@ import org.junit.runner.RunWith;
 
 
 public class cukksrunner {}
+
+
+

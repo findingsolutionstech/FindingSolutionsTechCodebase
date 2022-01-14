@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+
+
+
+  <test name="RemoteGridExecutionChrome">
+  
+  	<parameter name="remoteExecution" value="remote.chrome.execution" />  		
+  		<classes>
+  		  <class name="com.saucedemo.utils.RemoteGridExecution" />
+  		</classes>
+  </test> <!-- Test -->
+  
+  
+  
+  
+  
+  
+  <test name="RemoteGridExecutionFirefox">
+  
+  	<parameter name="remoteExecution" value="remote.firefox.execution" />  		
+  		<classes>
+  		  <class name="com.saucedemo.utils.RemoteGridExecution" />
+  		</classes>
+  		
+  		
+  		
+  </test> <!-- Test -->
+  
+  
+  
+  
+  
+  
+</suite> <!-- Suite -->

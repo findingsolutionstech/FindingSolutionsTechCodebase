@@ -28,40 +28,32 @@ public class ItemCheckoutStepDefinitions {
 	CheckOverviewPage checkOverviewPage;
 	CheckoutCompleteClass checkoutCompleteClass;
 	
-//	@Given("user navigates to saucelabs application")
-//	public void user_navigates_to_saucelabs_application() {
-//		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "\\Drivers\\ChromeDriver.exe");
-//        driver = new ChromeDriver();
-//
-//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//		
-//        loginPage = new LoginPage(driver);
-//        loginPage.getBrowser();
-//	}
-	
+ 	
 	
 	@Then("validate expected title as basic user")
 	public void validate_expected_title_as_basic_user() {
+		loginPage = new LoginPage(driver);
 		loginPage.validateLoginPageTitle();
 	}
 
 
-	@When("user enters valid (.*) username")
+	@When("user enters valid {string} username")
 	public void user_enters_valid_username(String username) {
+		loginPage = new LoginPage(driver);
 		loginPage.sendValidUserName(username);
 	}
 	
 
-	@When("user enters standard (.*) user password")
+	@When("user enters standard {string} user password")
 	public void user_enters_standard_user_password(String password) {
 		loginPage.sendValidPassword(password);
 	}
 
-	@When("user clicks login")
-	public void user_clicks_login() {
-
-		loginPage.clickLoginButton();
-	}
+//	@When("user clicks login")
+//	public void user_clicks_login() {
+//
+//		loginPage.clickLoginButton();
+//	}
 
 	@When("user selects and item")
 	public void user_selects_and_item() {
@@ -80,7 +72,7 @@ public class ItemCheckoutStepDefinitions {
 		yourCartPage.clickingCheckoutButton();
 	}
 
-	@Then("enters first name (.*) first name on contact info page")
+	@Then("enters first name {string} first name on contact info page")
 	public void enters_first_name_(String firstname) {
 		checkoutInfoPage = new CheckoutInfoPage(driver);
 		checkoutInfoPage.enteringFirstName(firstname);
@@ -91,12 +83,12 @@ public class ItemCheckoutStepDefinitions {
 		checkoutInfoPage.enteringLastNameField(lastname);
 	}
 	
-	/*
-	@Then("user enters valid postal code")
-	public void user_enters_valid_postal_code() {
-		checkoutInfoPage.enteringPostalCodeField();
-	}
-	*/
+	
+//	@Then("user enters valid postal code")
+//	public void user_enters_valid_postal_code() {
+//		checkoutInfoPage.enteringPostalCodeField();
+//	}
+	
 	
 
 	@Then("clicks continue")
@@ -113,7 +105,7 @@ public class ItemCheckoutStepDefinitions {
 	}
 
 	
-	
+
 	@Then("user should see success message")
 	public void user_should_see_success_message() {
 		checkoutCompleteClass = new CheckoutCompleteClass(driver);
@@ -148,7 +140,7 @@ public class ItemCheckoutStepDefinitions {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
-	
-	
+
+ 
 
 }
